@@ -9,6 +9,7 @@ all: download_test config_test
 download_test:
 	(       cd $(SRC_NAME) ; \
 		git submodule update --init --recursive ; \
+                git submodule update --recursive --remote ; \
 		patch -p1 -i ../msd_lite.diff ; \
 	 )
 
