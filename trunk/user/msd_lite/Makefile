@@ -9,7 +9,9 @@ all: download_test config_test
 download_test:
 	(       cd $(SRC_NAME) ; \
 		git submodule update --init --recursive ; \
+                cd src ; \
                 git clone https://github.com/rozhuk-im/liblcb.git ; \
+                cd ../ ; \
 		patch -p1 -i ../msd_lite.diff ; \
 	 )
 
