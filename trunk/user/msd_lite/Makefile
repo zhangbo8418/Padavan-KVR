@@ -1,7 +1,7 @@
 SRC_NAME=msd_lite
 THISDIR = $(shell pwd)
 
-CFLAGS += -fno-unwind-tables -fno-asynchronous-unwind-tables
+CFLAGS += -fno-unwind-tables -fno-asynchronous-unwind-tables -static
 
 all: download_test config_test
 	$(MAKE) -j$(HOST_NCPU) -C $(SRC_NAME)/build
